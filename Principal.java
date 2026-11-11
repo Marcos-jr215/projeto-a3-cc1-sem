@@ -39,10 +39,10 @@ public class Principal {
                     exibirResumo();
                     break;
                 case 0:
-                    System.out.println("\\nPrograma encerrado. Ate mais!");
+                    System.out.println("\nPrograma encerrado. Ate mais!");
                     break;
                 default:
-                    System.out.println("\\nOpcao invalida. Tente novamente.");
+                    System.out.println("\nOpcao invalida. Tente novamente.");
             }
         } while (opcao != 0);
 
@@ -50,7 +50,7 @@ public class Principal {
     }
 
     static void exibirMenu() {
-        System.out.println("\\n==============================================");
+        System.out.println("\n==============================================");
         System.out.println("       SISTEMA DE FOLHA DE PAGAMENTO");
         System.out.println("==============================================");
         System.out.println("1 - Cadastrar Colaborador Padrao");
@@ -113,7 +113,7 @@ public class Principal {
     }
 
     static void cadastrarDadosBasicos(int tipo) {
-        System.out.println("\\n--- Cadastro de colaborador ---");
+        System.out.println("\n--- Cadastro de colaborador ---");
 
         String matricula;
         do {
@@ -223,13 +223,13 @@ public class Principal {
 
     static void gerarFolha() {
         if (matriculas.isEmpty()) {
-            System.out.println("\\nNao existem colaboradores cadastrados.");
+            System.out.println("\nNao existem colaboradores cadastrados.");
             return;
         }
 
         double totalFolha = 0.0;
 
-        System.out.println("\\n================ FOLHA DE PAGAMENTO ================");
+        System.out.println("\n================ FOLHA DE PAGAMENTO ================");
         for (int i = 0; i < matriculas.size(); i++) {
             double salario = calcularSalario(i);
             totalFolha += salario;
@@ -273,7 +273,7 @@ public class Principal {
             }
         }
 
-        System.out.println("\\n============= RESUMO DA FOLHA =============");
+        System.out.println("\n============= RESUMO DA FOLHA =============");
         System.out.println("Total de colaboradores: " + matriculas.size());
         System.out.println("Colaboradores padrao: " + padrao);
         System.out.println("Colaboradores comissionados: " + comissionados);
